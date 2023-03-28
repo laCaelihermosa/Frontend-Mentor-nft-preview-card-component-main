@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Body:                        'Outfit', sans-serif;
+    --Very-Dark-BlueBG :           hsl(217, 54%, 11%);           /* (main BG) */
+    --Very-Dark-Blue-Card :        hsl(216, 50%, 16%);           /* (card BG) */
+    --Very-Dark-Blue :             hsl(215, 32%, 27%);           /* (line) */
+    --White:                         hsl(0, 0%, 100%);
+    --Soft-Blue:                   hsl(215, 51%, 70%);
+    --Cyan-View:            hsla(178, 100%, 50%, 0.5);
+    --Cyan:                       hsl(178, 100%, 50%);
+    --Shadow:               hsla(216, 83%, 7%, 0.274);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::before,
+::after {
+    box-sizing: border-box;    
+}
+
+body{
+    font: 18px var(--Body);    
+    background: var(--Very-Dark-BlueBG);
+}
+
+.flex {
+    display: flex;
+}
+
+.shadow {
+    width: 360px;
+    height: 586px;
+    margin: 60px auto;   
+    border-radius: 16px;  
+    background: var(--Shadow);  
+    position: relative;  
+}
+
+.container {
+    width: 330px;
+    height: 546px;
+    margin: 20px 15px ;      
+    border-radius: 16px;   
+    background: var(--Very-Dark-Blue-Card);
+    overflow: hidden;  
+    position: absolute 
+   
+}
+
+.frontcover {
+    width: 280px;
+    height: 280px;    
+    margin: 25px 25px 0 25px; 
+    border-radius: 8px;      
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: cover;   
+    overflow: hidden;
+}
+
+.view {    
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: var(--Cyan-View) url(images/icon-view.svg) no-repeat center;    
+}                   
+
+.view:hover {
+    opacity: 1;                                            
+    cursor: pointer;    
+}
+
+.section {
+    padding: 10px 25px;
+}
+
+.title {
+    font: 600 1.2em var(--Body);     
+    margin: 10px 0 18px;    
+    color: var(--White);
+}
+
+.title:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.description {
+    margin: 15px 0;    
+    font: 300 0.9em var(--Body);    
+    color: var(--Soft-Blue);
+    line-height: 25px;
+}
+
+.content {   
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.eth {      
+    gap: 5px;
+    color: var(--Cyan);
+}
+
+.clock {   
+    gap: 5px;
+    color: var(--Soft-Blue);
+}
+
+.doer {  
+    justify-content: center;
+    align-items: center;
+    gap: 15px;   
+    margin-top: 10px;
+    font-size: 0.85em;
+}
+
+.line {
+    margin: 15px auto;          
+    padding: 0 10px;  
+    border-top: 0.05px solid var(--Soft-Blue);
+}
+
+.avatar {
+    width: 37px;
+    height: 37px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.text {
+    color: var(--Soft-Blue);
+}
+
+.name {
+    color: var(--White);
+}
+
+.name:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    color: var(--White);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+/* Large Viewport media */
+@media (min-width: 700px) {
+    .container {
+        width: 370px;
+        height: 600px;
+    }
+
+    .shadow {
+        width: 401px;
+        height: 641px;
+        margin: 60px auto;   
+        border-radius: 16px; 
+       
+    }
+
+    .frontcover {
+        width: 320px;
+        height: 300px;
+    }
+
+    .title {
+        font-size: 1.3em;
+        margin: 20px 0;
+    }
+
+    .description {
+        font-size: 1.1em;
+        margin: 20px 0;
+        line-height: 30px;        
+    }
+
+    .content {
+        font-size: 1em;
+    }
+
+    .doer {
+        font-size: 1em;
+    }   
+}
